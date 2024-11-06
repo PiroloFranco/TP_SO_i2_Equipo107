@@ -1,2 +1,6 @@
 Pirolo Franco
 Agostina Pietraroia
+Santino Ramos Conti
+
+A) Configuro el remoto upstream con la URL del repositorio de BETA, hago fetch de los cambios en upstream y Fusiono esos cambios en mi rama main. Finalmente, hago push a mi repositorio en GitHub para que los cambios queden guardados.
+B) No directamente, ya que cada fork se mantiene separado. ALFA puede actualizar su fork solo con el repositorio original (el de BETA) usando fetch y merge en su propio upstream.
