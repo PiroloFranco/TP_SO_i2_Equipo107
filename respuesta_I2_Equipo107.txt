@@ -4,3 +4,5 @@ Santino Ramos Conti
 
 A) Configuro el remoto upstream con la URL del repositorio de BETA, hago fetch de los cambios en upstream y Fusiono esos cambios en mi rama main. Finalmente, hago push a mi repositorio en GitHub para que los cambios queden guardados.
 B) No directamente, ya que cada fork se mantiene separado. ALFA puede actualizar su fork solo con el repositorio original (el de BETA) usando fetch y merge en su propio upstream.
+C) Si, primero se debe agregar el repositorio de ALFA como remoto, luego GAMMA obtiene los cambios del repositorio de ALFA. Se combinan los cambios del repositorio de ALFA en su propio fork y por ultimo se hace push de los cambios actualizados a su propio fork.
+D) No, los datos que tenías en tu repositorio, editados por ti, no se pierden si quieres actualizar el fork. Cuando actualizas tu fork, los cambios se fusionan con los datos existentes en tu repositorio. Si hay conflictos entre los cambios, Git te pedirá que los resuelvas manualmente, pero tus datos no se eliminarán automáticamente.
