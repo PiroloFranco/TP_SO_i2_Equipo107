@@ -6,3 +6,39 @@ A) Configuro el remoto upstream con la URL del repositorio de BETA, hago fetch d
 B) No directamente, ya que cada fork se mantiene separado. ALFA puede actualizar su fork solo con el repositorio original (el de BETA) usando fetch y merge en su propio upstream.
 C) Si, primero se debe agregar el repositorio de ALFA como remoto, luego GAMMA obtiene los cambios del repositorio de ALFA. Se combinan los cambios del repositorio de ALFA en su propio fork y por ultimo se hace push de los cambios actualizados a su propio fork.
 D) No, los datos que tenías en tu repositorio, editados por ti, no se pierden si quieres actualizar el fork. Cuando actualizas tu fork, los cambios se fusionan con los datos existentes en tu repositorio. Si hay conflictos entre los cambios, Git te pedirá que los resuelvas manualmente, pero tus datos no se eliminarán automáticamente.
+E) 
+1. BETA crea el repositorio en GitHub
+BETA crea el repositorio en GitHub y lo llama TP_SO_i2_Equipo con un archivo readme y el archivo fork.txt.
+2. GAMMA y ALFA hacen un fork del repositorio de BETA
+git clone https://github.com/(GAMMA/ALFA)/TP_SO_i2_Equipo.git
+cd TP_SO_i2_Equipo
+3. GAMMA y ALFA editan el archivo fork.txt
+nano fork.txt
+4. GAMMA y ALFA suben los cambios a sus repositorios remoto:
+git add fork.txt
+git commit -m "Agregados mis datos al archivo fork.txt"
+git push origin main
+5. BETA crea el archivo NuevoDato.txt
+touch NuevoDato.txt
+6. BETA sube el archivo NuevoDato.txt a su repositorio remoto
+git add NuevoDato.txt
+git commit -m "Creado archivo NuevoDato.txt"
+git push origin main
+7. GAMMA y ALFA actualizan su repositorio al estado de BETA:
+git pull https://github.com/(BETA)/TP_SO_i2_Equipo.git main
+8. BETA crea el archivo respuesta_I2_EquipoX.txt y agrega respuestas c) y d)
+touch respuesta_I2_EquipoX.txt
+nano respuesta_I2_EquipoX.txt
+9. GAMMA sube sus respuestas a) y b)
+git add respuesta_I2_EquipoX.txt
+git commit -m "Agregadas respuestas a) y b)"
+git push origin main
+10. ALFA sube su respuesta e):
+git add respuesta_I2_EquipoX.txt
+git commit -m "Agregada respuesta e)"
+git push origin main
+
+
+BETA: Pirolo, Franco
+GAMMA: Ramos Conti, Santino
+ALFA: Pietraroia, Agostina
